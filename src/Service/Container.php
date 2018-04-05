@@ -4,6 +4,7 @@
 namespace calderawp\CalderaContainers\Service;
 
 use calderawp\CalderaContainers\Interfaces\ProvidesService;
+use calderawp\CalderaContainers\Interfaces\ServiceContainer;
 
 /**
  * Class Container
@@ -14,7 +15,7 @@ use calderawp\CalderaContainers\Interfaces\ProvidesService;
  * Cool plugin for managin plugin/ theme installs with git.
  * -> https://wppusher.com/
  */
-class Container
+class Container implements ServiceContainer
 {
 
 	/**

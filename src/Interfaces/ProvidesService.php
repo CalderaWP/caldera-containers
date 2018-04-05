@@ -3,8 +3,6 @@
 
 namespace calderawp\CalderaContainers\Interfaces;
 
-use calderawp\CalderaContainers\Container;
-
 /**
  * Interface ProvidesService
  *
@@ -16,7 +14,7 @@ interface ProvidesService
 	/**
 	 * Register provider
 	 *
-	 * @param Container $container
+	 * @param ServiceContainer $container
 	 */
-	public function registerService(Container $container);
+	public function registerService(ServiceContainer $container);
 }

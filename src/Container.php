@@ -3,6 +3,7 @@
 
 namespace calderawp\CalderaContainers;
 
+use calderawp\CalderaContainers\Exceptions\NotFoundException;
 use calderawp\CalderaContainers\Interfaces\Arrayable;
 use Psr\Container\ContainerInterface;
 
@@ -55,6 +56,7 @@ abstract class Container implements \JsonSerializable, Arrayable, ContainerInter
 		if ($this->has($id)) {
 			return $this->getPimple()->offsetGet($id);
 		}
+		throw new NotFoundException(sprintf('Service %s not found in container', $id));
 	}
 
 	/**

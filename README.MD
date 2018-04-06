@@ -1,6 +1,11 @@
 # Caldera Containers
-A collection of useful containers.
+A collection of useful containers for Caldera (or your) development.
 
+## Install
+`composer require caldera-containers`
+
+## Requires PHP 5.6+
+* [Not tested in 5.6 or 7.0, but should work](https://github.com/CalderaWP/caldera-containers/issues/1)
 ## Containers
 
 * `calderawp\CalderaContainers\Container`

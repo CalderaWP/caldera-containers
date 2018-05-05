@@ -7,7 +7,7 @@ namespace calderawp\CalderaContainers\Tests\Mocks;
 use calderawp\CalderaContainers\Interfaces\ProvidesService;
 use calderawp\CalderaContainers\Interfaces\ServiceContainer;
 
-class SivanService implements ProvidesService
+class Provider implements ProvidesService
 {
 
 	/** @inheritdoc */
@@ -15,8 +15,8 @@ class SivanService implements ProvidesService
 	{
 		$container->bind( $this->getAlias(), function (){
 			return (object) [
-				'Roy',
-				'Mike'
+				'Roy' => 'Sivan',
+				'Mike' => 'Corkum'
 			];
 		} );
 	}

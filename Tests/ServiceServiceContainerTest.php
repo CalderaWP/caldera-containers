@@ -80,6 +80,19 @@ class ServiceContainerTest extends TestCase
         $container->singleton( $classRef, new \calderawp\CalderaContainers\Tests\Mocks\Something());
 
         $this->assertSame( $container->make($classRef), $container->make($classRef));
+	}
 
-    }
+	/**
+	 * Test that we can use a function to create a lazy-loaded singleton
+	 */
+	public function testLazySingleton()
+	{
+		$container = new \calderawp\CalderaContainers\Service\Container();
+		$container->singleton( 'X', function (){
+			$x = new stdClass();
+			$x->sivan = 'Roy';
+			return $x;
+		});
+		$this->assertSame( $container->make('X'), $container->make('X' ) );
+	}
 }

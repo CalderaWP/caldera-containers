@@ -22,10 +22,12 @@ A basic service container, with provider bindings, lazy-loaded objects, and sing
 
 ### Usage
 #### `calderawp\CalderaContainers\Container`
+@todo
 
 #### `calderawp\CalderaContainers\ControlledContainer`
+@todo
 
-#### `calderawp\CalderaContainers\Service\Coantainer`
+#### `calderawp\CalderaContainers\Service\Container`
 
 #### Binding As Factory
 Add a binding that returns a _new_ object of the same class using the alias `std`
